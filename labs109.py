@@ -74,10 +74,9 @@ def riffle(items, out=True):
         return items
     
 def only_odd_digits(n):
-    strengur = str(n)
-    print("1.", strengur)
-    for i in strengur:
-        lowest = strengur[:1]
+    list.lengd = len(str(n))
+    for i in range.lengd:
+        lowest = (n//2==0)
         print("2. Lowest:", lowest)
         if lowest /2 == 0:
             print("3.", False)
