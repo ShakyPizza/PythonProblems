@@ -31,14 +31,14 @@ def is_ascending(items):
     return True
     
 
-# Started 11.02.2025 - BOP
+# Started 11.02.2025 - BOP - solved 13.02.2025 - NUAI
 def riffle(items, out=True):
 
     result = []
 
     if len(items) >= 4:
         h = len(items) // 2
-        if out == True:
+        if out:
             split_list1 = items[:h]
             split_list2 = items[h:]
 
@@ -52,7 +52,7 @@ def riffle(items, out=True):
         return result
            
     elif len(items) == 2:
-        if out == True:
+        if out:
             return items
         else:
             result.append(items[1])
@@ -60,11 +60,11 @@ def riffle(items, out=True):
             return result
 
     elif len(items) == 3:
-        if out == True:
-            result.append(items[0,2,1])
+        if out:
+            result.append(items[0], items[2], items[1])
             return result
         else:
-            result.append(items[1, 0, 2])
+            result.append(items[1], items[0], items[2])
             return result
 
     elif (len(items)) == 0:
@@ -73,5 +73,26 @@ def riffle(items, out=True):
     else:
         return items
     
-    print(len(items))
-    print(result)
+def only_odd_digits(n):
+    strengur = str(n)
+    print("1.", strengur)
+    for i in strengur:
+        lowest = strengur[:1]
+        print("2. Lowest:", lowest)
+        if lowest /2 == 0:
+            print("3.", False)
+            return False
+        if lowest /2 != 0:
+            print("3.", True)
+            return True
+        else:
+            return Exception
+        
+    lowest = n%10
+    print(lowest)
+    #for i in n:
+
+
+
+test = 4223
+only_odd_digits(test)
