@@ -34,7 +34,6 @@ def is_ascending(items):
 # Started 11.02.2025 - BOP
 def riffle(items, out=True):
 
-    print(len(items))
     result = []
 
     if len(items) >= 4:
@@ -62,14 +61,10 @@ def riffle(items, out=True):
 
     elif len(items) == 3:
         if out == True:
-            result.append(items[0])
-            result.append(items[2])
-            result.append(items[1])
+            result.append(items[0,2,1])
             return result
         else:
-            result.append(items[1])
-            result.append(items[0])
-            result.append(items[2])
+            result.append(items[1, 0, 2])
             return result
 
     elif (len(items)) == 0:
@@ -78,8 +73,5 @@ def riffle(items, out=True):
     else:
         return items
     
-#print(len(items))
-#print(result)
-#
-#test = [-4,0,1,-1]
-#riffle(test, True)
+    print(len(items))
+    print(result)
