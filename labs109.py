@@ -33,18 +33,53 @@ def is_ascending(items):
 
 # Started 11.02.2025 - BOP
 def riffle(items, out=True):
-    
-    if len(items) > 1:
+
+    print(len(items))
+    result = []
+
+    if len(items) >= 4:
         h = len(items) // 2
-        split_list1 = items[:h]
-        split_list2 = items[h:]
-        result = []
+        if out == True:
+            split_list1 = items[:h]
+            split_list2 = items[h:]
+
+        else:
+            split_list2 = items[:h]
+            split_list1 = items[h:]
+            
         for n in range(len(items)//2):
             result.append(split_list1[n])
             result.append(split_list2[n])
+        return result
+           
     elif len(items) == 2:
-        result.append(items[1])
-        result.append(items[0])
+        if out == True:
+            return items
+        else:
+            result.append(items[1])
+            result.append(items[0])
+            return result
+
+    elif len(items) == 3:
+        if out == True:
+            result.append(items[0])
+            result.append(items[2])
+            result.append(items[1])
+            return result
+        else:
+            result.append(items[1])
+            result.append(items[0])
+            result.append(items[2])
+            return result
+
+    elif (len(items)) == 0:
+        return items
     
     else:
         return items
+    
+#print(len(items))
+#print(result)
+#
+#test = [-4,0,1,-1]
+#riffle(test, True)
