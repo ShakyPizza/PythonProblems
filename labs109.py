@@ -48,7 +48,7 @@ def riffle(items, out=True):
             
         for n in range(len(items)//2):
             result.append(split_list1[n])
-            result.append(split_list2[n])
+            result.append(split_list2[n])    
         return result
            
     elif len(items) == 2:
@@ -72,26 +72,30 @@ def riffle(items, out=True):
     
     else:
         return items
-    
-def only_odd_digits(n):
-    list.lengd = len(str(n))
-    for i in range.lengd:
-        lowest = (n//2==0)
-        print("2. Lowest:", lowest)
-        if lowest /2 == 0:
-            print("3.", False)
-            return False
-        if lowest /2 != 0:
-            print("3.", True)
-            return True
-        else:
-            return Exception
-        
-    lowest = n%10
-    print(lowest)
-    #for i in n:
+
+#def only_odd_digits(n):
+#    list.lengd = len(str(n))
+#    for i in range.lengd:
+#        lowest = (n//2==0)
+#        print("2. Lowest:", lowest)
+#        if lowest /2 == 0:
+#            print("3.", False)
+#            return False
+#        if lowest /2 != 0:
+#            print("3.", True) 
+#            return True
+#        else:
+#            return Exception
+#        
+#    lowest = n%10
+#    print(lowest)
+#    #for i in n:
+#
+#
+#
+#test = 4223
+#only_odd_digits(test)
 
 
 
-test = 4223
-only_odd_digits(test)
+
