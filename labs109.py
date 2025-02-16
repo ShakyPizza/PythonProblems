@@ -104,4 +104,7 @@ def is_cyclops(n):
 # Started 16.02.2025 - BOP - 
 
 def domino_cycle(tiles):
+    if tiles == []:
+        return True
     
+    elif tiles
