@@ -82,7 +82,7 @@ def only_odd_digits(n):
         return False
 
 
-# # Started 16.02.2025 - BOP - solved 16.02.2025 - SUAI
+# Started 16.02.2025 - BOP - solved 16.02.2025 - SUAI
 def is_cyclops(n):
     s = str(n)
     
@@ -101,6 +101,7 @@ def is_cyclops(n):
     return True
 
 
+# Started 16.02.2025 - BOP - 
 
-
-
+def domino_cycle(tiles):
+    
