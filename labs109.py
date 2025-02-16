@@ -73,28 +73,20 @@ def riffle(items, out=True):
     else:
         return items
 
-#def only_odd_digits(n):
-#    list.lengd = len(str(n))
-#    for i in range.lengd:
-#        lowest = (n//2==0)
-#        print("2. Lowest:", lowest)
-#        if lowest /2 == 0:
-#            print("3.", False)
-#            return False
-#        if lowest /2 != 0:
-#            print("3.", True) 
-#            return True
-#        else:
-#            return Exception
-#        
-#    lowest = n%10
-#    print(lowest)
-#    #for i in n:
-#
-#
-#
-#test = 4223
-#only_odd_digits(test)
+
+# Started 14.02.2025 - BOP - solved 16.02.2025 - USOF
+def only_odd_digits(n):
+    if set(str(n)).issubset(set("13579")):
+        return True
+    else:
+        return False
+
+
+
+
+
+
+
 
 
 
