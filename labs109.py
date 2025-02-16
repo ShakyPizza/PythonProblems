@@ -82,22 +82,23 @@ def only_odd_digits(n):
         return False
 
 
-# # Started 16.02.2025 - BOP - solved xx.xx.2025 - xxxx
+# # Started 16.02.2025 - BOP - solved 16.02.2025 - SUAI
 def is_cyclops(n):
-    if set(str(n)).issubset(set("0")):
-        print("Fann 0 í tölunni")
-        for i in len(n):
-            print(i)
-
-
-    else:
-        print(set(str(n)))
-        print("False")
-        return False    
-
-test = 101
-
-is_cyclops(test)
+    s = str(n)
+    
+    if len(s) % 2 == 0:
+        return False
+    
+    mid_index = len(s) // 2
+    
+    if s[mid_index] != '0':
+        return False
+    
+    for i, digit in enumerate(s):
+        if i != mid_index and digit == '0':
+            return False
+    
+    return True
 
 
 
