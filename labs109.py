@@ -104,7 +104,44 @@ def is_cyclops(n):
 # Started 16.02.2025 - BOP - 
 
 def domino_cycle(tiles):
-    if tiles == []:
+
+    print("Uphafleg  tiles:", tiles)
+    print("Upphafleg lengd:", len(tiles))
+
+    if len(tiles) == 1:
+        print("lengd <= 1")
+        fyrri, seinni = zip(*tiles)
+        for item in fyrri:
+            if fyrri == seinni:
+                print("debug 2: True")
+                return True
+            else:
+                print("debug 3: False")
+                return False
+    if len(tiles) == 0:
+        print("Lengd == 0")
         return True
+    if len(tiles) == 2:
+        fyrri, seinni = zip(*tiles)
+        if fyrri[1] == seinni[0] and fyrri[0] == seinni[1]:
+            return True
+        else:
+            return False
+    if len(tiles) > 2:
+        fyrri, seinni = zip(*tiles)
+        fyrsta_sett = tiles[0]
+        seinna_sett = tiles[-1]
+        for f in fyrri:
+            for s in seinni:
+                print("fyrri:", f, "Seinni:", s)
+            #if fyrri[n] == seinni[n-1] and fyrsta_sett[0] == seinna_sett[-1]:
+            #    return True
+            #else:
+            #    print("Debug 4: False")
+            #    return False
+        
     
-    elif tiles
+
+test = [(5, 2), (2, 3), (3, 6), (6, 5), (5, 5)]
+
+domino_cycle(test)
